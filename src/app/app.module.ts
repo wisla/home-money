@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {AuthModule} from "./auth/auth.module";
+import {HttpClientModule} from "@angular/common/http";
+import {AppRoutingModule} from "./app-routing.module";
+import {UsersService} from "./shared/services/users.service";
+import {AuthService} from "./shared/services/auth.service";
+import {SystemModule} from "./system/system.module";
 
 
 @NgModule({
@@ -10,9 +16,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AuthModule,
+    AppRoutingModule,
+    SystemModule
   ],
-  providers: [],
+  providers: [UsersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
