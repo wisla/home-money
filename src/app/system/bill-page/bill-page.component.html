@@ -1,16 +1,17 @@
 <div class="title-block">
   <h3 class="title pull-left">
-    Страница счета <span class="sparkline bar"></span>
+    Page Account <span class="sparkline bar"></span>
   </h3>
   <div class="pull-right">
-    <button class="btn-sm btn btn-primary-outline">
+    <button class="btn-sm btn btn-primary-outline" (click)="onRefresh()">
       <i class="fa fa-refresh"></i>
     </button>
   </div>
 </div>
 <section class="section">
-  <div class="row">
-    <wisla-bill-card></wisla-bill-card>
-    <wisla-currency-card></wisla-currency-card>
+  <div class="row text-center" *ngIf="!isLoaded">Loading...</div>
+  <div class="row" *ngIf="isLoaded">
+    <wisla-bill-card [bill]="bill" [currency]="currency"></wisla-bill-card>
+    <wisla-currency-card [currency]="currency"></wisla-currency-card>
   </div>
 </section>
