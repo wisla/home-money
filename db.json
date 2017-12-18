@@ -26,12 +26,12 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 95800,
     "currency": "PLN"
   },
   "categories": [
     {
-      "name": "Дом",
+      "name": "House2",
       "capacity": 15000,
       "id": 1
     },
@@ -44,6 +44,16 @@
       "id": 3,
       "name": "Машина",
       "capacity": 7000
+    },
+    {
+      "name": "newItem",
+      "capacity": 3,
+      "id": 4
+    },
+    {
+      "name": "turbo",
+      "capacity": 22,
+      "id": 5
     }
   ],
   "events": [
@@ -86,6 +96,60 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "amount": 100,
+      "category": 1,
+      "date": "17.12.2017 18:21:44",
+      "description": "yyy",
+      "id": 6
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "18.12.2017 08:39:15",
+      "description": "ttt",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "18.12.2017 08:41:38",
+      "description": "ttt",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 5,
+      "category": 8,
+      "date": "18.12.2017 08:55:24",
+      "description": "odejmowanie",
+      "id": 12
+    },
+    {
+      "type": "income",
+      "amount": 10000000,
+      "category": 8,
+      "date": "18.12.2017 08:57:12",
+      "description": "uu",
+      "id": 13
+    },
+    {
+      "type": "outcome",
+      "amount": 1200,
+      "category": 3,
+      "date": "18.12.2017 13:05:42",
+      "description": "test",
+      "id": 14
+    },
+    {
+      "type": "outcome",
+      "amount": 3000,
+      "category": 3,
+      "date": "18.12.2017 13:06:08",
+      "description": "test2",
+      "id": 15
     }
   ]
 }

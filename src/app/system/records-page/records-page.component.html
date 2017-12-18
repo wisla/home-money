@@ -4,18 +4,23 @@
   </h3>
 </div>
 
-<section class="section">
+<section class="section text-center" *ngIf="!isLoaded"></section>
+
+<section class="section" *ngIf="isLoaded">
   <div class="row">
     <div class="col-md-6">
-      <wisla-add-event></wisla-add-event>
+      <wisla-add-event [categories]="categories"></wisla-add-event>
     </div>
     <div class="col-md-6">
-      <wisla-add-category></wisla-add-category>
+      <wisla-add-category (onCategoryAdd)="newCategoryAdded($event)"></wisla-add-category>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <wisla-edit-category></wisla-edit-category>
+      <wisla-edit-category
+        [categories]="categories"
+        (onCategoryEdit)="categoryWasEdited($event)"
+      ></wisla-edit-category>
     </div>
   </div>
 </section>
