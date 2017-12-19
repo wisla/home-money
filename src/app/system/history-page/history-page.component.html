@@ -3,8 +3,15 @@
     Страница истории <span class="sparkline bar"></span>
   </h3>
 </div>
-<wisla-history-chart></wisla-history-chart>
+<div *ngIf="!isLoaded" class="text-center">Loading...</div>
+<div *ngIf="isLoaded">
+    <wisla-history-chart [data]="chartData"></wisla-history-chart>
+    
+    <wisla-history-events
+    [categories]="categories"
+    [events]="events"
+    ></wisla-history-events>
+    
+    <wisla-history-filter></wisla-history-filter>
+</div>
 
-<wisla-history-events></wisla-history-events>
-
-<wisla-history-filter></wisla-history-filter>
