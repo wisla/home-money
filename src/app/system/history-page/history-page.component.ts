@@ -24,6 +24,8 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
     events: WISLAEvent[] = [];
   
     chartData = [];
+
+    isFilterVisible = false;
   
     ngOnInit() {
       this.s1 = Observable.combineLatest(
@@ -52,6 +54,22 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
           }, 0)
         });
       });
+    }
+
+    private toggleFilterVisibility(dir: boolean) {
+      this.isFilterVisible = dir;
+    }
+
+    openFilter() {
+      this.toggleFilterVisibility(true);
+    }
+
+    onFilterApply(filterData) {
+
+    }
+
+    onFilterCancel() {
+      this.toggleFilterVisibility(false);      
     }
   
     ngOnDestroy() {

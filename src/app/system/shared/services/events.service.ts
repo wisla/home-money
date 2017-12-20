@@ -17,4 +17,8 @@ export class EventsService extends BaseApi {
   getEvents(): Observable<WISLAEvent[]> {
     return this.get('events');
   }
+
+  getEventById(id: string): Observable<WISLAEvent> {
+    return this.get(`events/${id}`);
+  }
 }
