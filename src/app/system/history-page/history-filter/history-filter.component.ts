@@ -9,7 +9,7 @@ import { Category } from '../../shared/models/category.model';
 export class HistoryFilterComponent{
 
   @Output() onFilterCancel = new EventEmitter<any>();
-  @Output() onFilterAllpy = new EventEmitter<any>();
+  @Output() onFilterApply = new EventEmitter<any>();
 
   @Input() categories: Category[] = [];
 
@@ -18,13 +18,13 @@ export class HistoryFilterComponent{
   selectedCategories = [];
 
   timePeriods = [
-    {type: 'd', label: 'Day',}
-    {type: 'w', label: 'Week',}
-    {type: 'M', label: 'Month',}
+    {type: 'd', label: 'Day'},
+    {type: 'w', label: 'Week'},
+    {type: 'M', label: 'Month'}
   ];
 
   types = [
-    {type: 'íncome', label: 'Income'},
+    {type: 'income', label: 'Income'},
     {type: 'outcome', label: 'Outcome'}
   ];
 
@@ -37,9 +37,9 @@ export class HistoryFilterComponent{
 
   private calculateInputParams(field: string, checked: boolean, value: string) {
     if (checked) {
-      this.[field].indexOf(value) === -1 ? this.[field].push(value) : null;
+      this[field].indexOf(value) === -1 ? this[field].push(value) : null;
     } else {
-      this.[field] = this.[field].filter(i => i !== value);
+      this[field] = this[field].filter(i => i !== value);
     }
   }
 
@@ -52,7 +52,7 @@ export class HistoryFilterComponent{
   }
 
   applyFilter() {
-    this.onFilterAllpy.emit({
+    this.onFilterApply.emit({
       types: this.selectedTypes,
       categories: this.selectedCategories,
       period: this.selectedPeriod

@@ -5,11 +5,14 @@ import {User} from "../../shared/models/user.model";
 import {Message} from "../../shared/models/message.model";
 import {AuthService} from "../../shared/services/auth.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
+import {fadeStateTrigger} from "../../shared/animations/fade.animation";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'wisla-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
 
@@ -20,8 +23,16 @@ export class LoginComponent implements OnInit {
     private usersService: UsersService,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private title: Title,
+    private meta: Meta
+  ) {
+    title.setTitle('Entry into the system');
+    meta.addTags([
+      {name: 'keywords', content: 'login,enter,system'},
+      {name: 'description', content: 'entry into the system page'}
+    ])
+  }
 
   ngOnInit() {
     this.message = new Message('dander', '');
@@ -32,6 +43,11 @@ export class LoginComponent implements OnInit {
           this.showMessage({
             text: 'Now you can enter in system',
             type: 'success'
+          });
+        } else if (params['accessDenied']) {
+          this.showMessage({
+            text: 'You must be logged',
+            type: 'warning'
           });
         }
       });

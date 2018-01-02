@@ -9,7 +9,9 @@
   </div>
 </div>
 <section class="section">
-  <div class="row text-center" *ngIf="!isLoaded">Loading...</div>
+  <div class="row text-center" *ngIf="!isLoaded">
+    <wisla-loader></wisla-loader>
+  </div>
   <div class="row" *ngIf="isLoaded">
     <wisla-bill-card [bill]="bill" [currency]="currency"></wisla-bill-card>
     <wisla-currency-card [currency]="currency"></wisla-currency-card>

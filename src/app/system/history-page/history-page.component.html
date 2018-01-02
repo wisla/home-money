@@ -9,17 +9,19 @@
   </div>
 </div>
 
-<div *ngIf="!isLoaded" class="text-center">Loading...</div>
+<div *ngIf="!isLoaded" class="text-center">
+  <wisla-loader></wisla-loader>
+</div>
 <div *ngIf="isLoaded">
     <wisla-history-chart [data]="chartData"></wisla-history-chart>
-    
+
     <wisla-history-events
     [categories]="categories"
-    [events]="events"
+    [events]="filteredEvents"
     ></wisla-history-events>
     <div *ngIf="isFilterVisible">
       <wisla-history-filter
-        (onFilterApply)="onFilterApply()"
+        (onFilterApply)="onFilterApply($event)"
         (onFilterCancel)="onFilterCancel()"
         [categories]="categories"
       ></wisla-history-filter>
