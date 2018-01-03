@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "TITLE": "Hello Angular 2 with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "ABOUT": {
+    "TITLE": "About"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "TWITTER_MESSAGE": "Follow us on Twitter"
+  },
+  "TABS": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  },
+  "LOGIN": {
+    "TITLE": "Finanse Domowe",
+    "SUBTITLE": "Zaloguj się aby wejść",
+    "SUBTITLE-REG": "Zarejestruj się zby mieć dostęp",
+    "EMAIL": "Email",
+    "PLACEHOLDER-EMAIL": "Wprowadź swój Email",
+    "PASSWORD": "Hasło",
+    "PLACEHOLDER-PASSWORD": "Hasło",
+    "ENTER": "Zaloguj",
+    "NOACCOUNT": "Nie posiadasz jeszcze konta",
+    "REGISTATION": "Rejestracja",
+    "NAME": "Imię",
+    "PLACEHOLDER-NAME": "Podaj swoje imię",
+    "ACCEPTTERMS": "Akceptuję warunki"
+  },
+  "SYSTEM": {
+    "PAGEACCOUNT": "Przegląd konta"
+  }
+}

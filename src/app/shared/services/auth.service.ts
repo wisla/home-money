@@ -1,17 +1,18 @@
 export class AuthService {
 
-  private  isAuthentificated = false;
+  private isAuthenticated = false;
 
   login() {
-    this.isAuthentificated = true;
+    this.isAuthenticated = true;
   }
 
   logout() {
-    this.isAuthentificated = false;
+    this.isAuthenticated = false;
     window.localStorage.clear();
   }
 
-  isLoggedIn() {
-    return this.isAuthentificated;
+  isLoggedIn(): boolean {
+    return this.isAuthenticated;
   }
+
 }
