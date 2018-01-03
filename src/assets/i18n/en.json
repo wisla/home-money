@@ -1,0 +1,36 @@
+{
+  "HOME": {
+    "TITLE": "Hello Angular 2 with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "ABOUT": {
+    "TITLE": "About"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "TWITTER_MESSAGE": "Follow us on Twitter"
+  },
+  "TABS": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  },
+  "LOGIN": {
+    "TITLE": "Home Money",
+    "SUBTITLE": "Login for work",
+    "SUBTITLE-REG": "Registration for access",
+    "EMAIL": "Email",
+    "PLACEHOLDER-EMAIL": "Enter your Email",
+    "PASSWORD": "Password",
+    "PLACEHOLDER-PASSWORD": "Password",
+    "ENTER": "Login",
+    "NOACCOUNT": "Doesn't have account yet",
+    "REGISTATION": "Registration",
+    "NAME": "Name",
+    "PLACEHOLDER-NAME": "Enter your Name",
+    "ACCEPTTERMS": "Accept terms and conditions"
+  },
+  "SYSTEM": {
+    "PAGEACCOUNT": "Page Account"
+  }
+}
